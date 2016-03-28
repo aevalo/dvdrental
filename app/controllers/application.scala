@@ -1,9 +1,10 @@
 package controllers
 
+import javax.inject._
 import play.api.mvc.{Action, Controller}
 
-object Application extends Controller {
+class Application @Inject() (webJarAssets: WebJarAssets) extends Controller {
   def index = Action {
-    Ok(views.html.index("Hello Play Framework"))
+    Ok(views.html.index("Hello Play Framework", webJarAssets))
   }
 }

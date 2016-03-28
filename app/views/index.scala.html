@@ -1,6 +1,6 @@
 @(message: String)
-
-@main("Welcome to Play Framework") {
+@(webJarAssets: WebJarAssets)
+@layout("Welcome to Play Framework", webJarAssets) {
 
 <div class="well">
   <h1>@message</h1>
